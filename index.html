@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Fisip Umrah – Fisip Umrah</title>
+<link href="https://fisip.umrah.ac.id/wp-content/uploads/2025/09/cropped-Lambang_Universitas_Maritim_Raja_Ali_Haji-32x32.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<meta name="google-site-verification" content="SrTZawFSaLAONuV52vjH13dAEw3zOeO0J7W9G7wwpi8" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+/* ── RESET ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',sans-serif;font-size:14px;color:#333;background:#fff}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;display:block}
+
+/* ── VARIABLES ── */
+:root{
+  --navy:#003471;
+  --blue:#0055a4;
+  --blue2:#1a7abf;
+  --gold:#c8960c;
+  --gold2:#e8aa0e;
+  --white:#fff;
+  --light:#f5f7fa;
+  --border:#e2e6ea;
+  --text:#444;
+  --text2:#666;
+  --radius:6px;
+}
+
+/* ════════════════════════════════════════
+   TOP BAR
+════════════════════════════════════════ */
+#topbar{
+  background:#002358;
+  padding:6px 0;
+  font-size:12px;
+  color:#a8c4e0;
+  border-bottom:1px solid rgba(255,255,255,.07)
+}
+#topbar .inner{display:flex;justify-content:space-between;align-items:center}
+#topbar .tb-left{display:flex;gap:20px}
+#topbar .tb-left span{display:flex;align-items:center;gap:5px}
+#topbar .tb-left i{color:var(--gold2);font-size:11px}
+#topbar .tb-right{display:flex;align-items:center;gap:5px}
+.tb-icon{
+  width:26px;height:26px;border-radius:50%;
+  background:rgba(255,255,255,.1);
+  display:flex;align-items:center;justify-content:center;
+  color:#a8c4e0;font-size:11px;transition:.2s
+}
+.tb-icon:hover{background:var(--gold);color:#fff}
+.tb-lang{display:flex;gap:5px;margin-left:12px}
+.tb-lang a{
+  font-size:11px;color:#a8c4e0;
+  padding:1px 7px;border:1px solid rgba(255,255,255,.2);
+  border-radius:2px;transition:.2s
+}
+.tb-lang a.active,.tb-lang a:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+
+/* ════════════════════════════════════════
+   HEADER  — gambar banner penuh lebar
+════════════════════════════════════════ */
+#site-header{
+  background:#fff;
+  border-bottom:3px solid var(--gold);
+  box-shadow:0 2px 8px rgba(0,0,0,.07)
+}
+.header-banner{
+  width:100%;
+  /* Gambar header dari URL asli yang diberikan user */
+  background:url('https://fisip.umrah.ac.id/wp-content/uploads/2025/09/HEADER-FISIP-UMRAH-WEBSITE1.png')
+             left center / auto 100px no-repeat,
+             #fff;
+  min-height:100px;
+  display:flex;align-items:center;justify-content:flex-end;
+  padding:10px 18px;
+  position:relative
+}
+/* Fallback jika gambar banner tidak load */
+.header-banner::before{
+  content:'';
+  position:absolute;left:0;top:0;bottom:0;
+  width:520px;
+  background:url('https://fisip.umrah.ac.id/wp-content/uploads/2025/09/HEADER-FISIP-UMRAH-WEBSITE1.png')
+             left center / contain no-repeat;
+  pointer-events:none
+}
+.header-logo-text{
+  display:flex;flex-direction:column;align-items:flex-start;
+  /* hidden by default — only shows if banner fails */
+  display:none
+}
+.header-right{
+  display:flex;flex-direction:column;align-items:flex-end;gap:9px;
+  position:relative;z-index:1
+}
+.searchbox{
+  display:flex;border:1.5px solid var(--border);
+  border-radius:4px;overflow:hidden
+}
+.searchbox input{
+  padding:7px 14px;font-size:13px;border:none;outline:none;
+  width:220px;font-family:inherit;background:#f9f9f9
+}
+.searchbox button{
+  background:var(--blue);color:#fff;border:none;
+  padding:0 14px;cursor:pointer;font-size:13px;transition:.2s
+}
+.searchbox button:hover{background:var(--navy)}
+.hlinks{display:flex;gap:7px}
+.hlinks a{
+  font-size:11.5px;color:var(--blue);
+  border:1.5px solid var(--blue);
+  padding:3px 11px;border-radius:3px;
+  font-weight:700;transition:.2s
+}
+.hlinks a:hover{background:var(--blue);color:#fff}
+
+/* ════════════════════════════════════════
+   NAVIGATION
+════════════════════════════════════════ */
+#nav{
+  background:var(--blue);
+  position:sticky;top:0;z-index:999;
+  box-shadow:0 3px 8px rgba(0,0,0,.22)
+}
+#nav .inner{display:flex;align-items:stretch}
+.nav-home{
+  background:var(--navy);color:#fff;
+  padding:0 17px;display:flex;align-items:center;
+  font-size:16px;flex-shrink:0;
+  border-right:1px solid rgba(255,255,255,.15);
+  transition:.2s
+}
+.nav-home:hover{background:var(--gold)}
+.nav-menu{display:flex;flex:1}
+.nav-menu>li{position:relative}
+.nav-menu>li>a{
+  display:flex;align-items:center;gap:5px;
+  color:#fff;padding:14px 16px;
+  font-size:12.5px;font-weight:700;
+  white-space:nowrap;transition:.2s;
+  border-right:1px solid rgba(255,255,255,.1)
+}
+.nav-menu>li>a i.arr{font-size:9px;opacity:.7}
+.nav-menu>li>a:hover,
+.nav-menu>li.cur>a{background:var(--navy)}
+/* Dropdown */
+.ddrop{
+  position:absolute;top:100%;left:0;
+  min-width:220px;background:#fff;
+  border-top:3px solid var(--gold);
+  box-shadow:0 6px 20px rgba(0,0,0,.14);
+  display:none;z-index:9999
+}
+.nav-menu>li:hover .ddrop{display:block}
+.ddrop li a{
+  display:block;padding:9px 17px;
+  font-size:13px;color:#333;
+  border-bottom:1px solid #f2f2f2;transition:.15s
+}
+.ddrop li a:hover{
+  background:var(--light);color:var(--blue);
+  padding-left:23px
+}
+
+/* ════════════════════════════════════════
+   CONTAINER
+════════════════════════════════════════ */
+.inner{max-width:1160px;margin:0 auto;padding:0 18px}
+
+/* ════════════════════════════════════════
+   HERO SLIDER
+════════════════════════════════════════ */
+#hero{position:relative;overflow:hidden;background:#001b40}
+.slider{position:relative;height:450px;overflow:hidden}
+.slide{
+  position:absolute;inset:0;opacity:0;
+  transition:opacity .9s ease;
+  background-size:cover;background-position:center top
+}
+.slide.on{opacity:1}
+
+/* Slide backgrounds — URL gambar nyata FISIP UMRAH */
+.sl1{
+  background-image:
+    linear-gradient(to top,rgba(0,20,55,.75) 0%,rgba(0,20,55,.15) 55%,transparent 100%),
+    url('https://fisip.umrah.ac.id/wp-content/uploads/2025/09/HEADER-FISIP-UMRAH-WEBSITE1.png');
+  background-size:cover,cover;
+  background-position:center,center
+}
+.sl2{
+  background-image:
+    linear-gradient(to top,rgba(0,20,55,.75) 0%,rgba(0,20,55,.2) 55%,transparent 100%),
+    url('https://fisip.umrah.ac.id/wp-content/uploads/2025/09/ormawa-gemilang.jpg');
+  background-size:cover,cover;
+  background-position:center,center
+}
+.sl3{
+  background:linear-gradient(135deg,#001535 0%,#003471 50%,#0055a4 100%)
+}
+/* slide 1 & 2 fallback pattern */
+.sl1,.sl2{background-color:#001b40}
+
+.slide-cap{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:30px 44px 36px;z-index:2
+}
+.s-badge{
+  display:inline-block;background:var(--gold);color:#fff;
+  font-size:11px;font-weight:800;padding:3px 11px;
+  border-radius:2px;margin-bottom:10px;
+  text-transform:uppercase;letter-spacing:.6px
+}
+.slide-cap h2{
+  font-family:'Nunito',sans-serif;
+  font-size:30px;font-weight:800;color:#fff;
+  line-height:1.22;text-shadow:0 2px 8px rgba(0,0,0,.5);
+  max-width:680px;margin-bottom:10px
+}
+.slide-cap p{color:rgba(255,255,255,.88);font-size:14px;max-width:560px;line-height:1.65}
+.slide-cap .s-btn{
+  display:inline-flex;align-items:center;gap:7px;
+  margin-top:14px;background:var(--gold);color:#fff;
+  padding:9px 22px;border-radius:4px;
+  font-size:13px;font-weight:700;transition:.2s
+}
+.slide-cap .s-btn:hover{background:var(--gold2);color:#222}
+/* deco shapes for slide 3 */
+.slide-deco{
+  position:absolute;right:60px;top:50%;
+  transform:translateY(-50%);
+  width:220px;opacity:.1;pointer-events:none
+}
+/* Arrows */
+.s-arrows{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:100%;display:flex;justify-content:space-between;
+  padding:0 14px;z-index:10;pointer-events:none
+}
+.s-arrows button{
+  pointer-events:all;width:40px;height:40px;
+  border-radius:50%;background:rgba(0,0,0,.35);
+  color:#fff;border:2px solid rgba(255,255,255,.3);
+  font-size:14px;cursor:pointer;transition:.2s;
+  display:flex;align-items:center;justify-content:center
+}
+.s-arrows button:hover{background:var(--gold);border-color:var(--gold)}
+/* Dots */
+.s-dots{
+  position:absolute;bottom:16px;right:44px;
+  display:flex;gap:7px;z-index:10
+}
+.s-dots span{
+  width:10px;height:10px;border-radius:50%;
+  background:rgba(255,255,255,.4);cursor:pointer;transition:.35s
+}
+.s-dots span.on{background:var(--gold2);width:24px;border-radius:6px}
+
+/* ════════════════════════════════════════
+   RUNNING TEXT / TICKER
+════════════════════════════════════════ */
+#ticker{
+  background:var(--gold);height:38px;
+  display:flex;align-items:stretch;overflow:hidden
+}
+.ticker-tag{
+  background:var(--navy);color:#fff;
+  padding:0 18px;display:flex;align-items:center;
+  gap:8px;font-size:12px;font-weight:800;
+  white-space:nowrap;flex-shrink:0;
+  text-transform:uppercase;letter-spacing:.5px
+}
+.ticker-track{overflow:hidden;flex:1;display:flex;align-items:center}
+.ticker-belt{
+  display:flex;gap:60px;white-space:nowrap;
+  animation:belt 40s linear infinite
+}
+.ticker-belt a{
+  color:var(--navy);font-weight:700;font-size:13px
+}
+.ticker-belt a:hover{text-decoration:underline}
+@keyframes belt{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ════════════════════════════════════════
+   MAIN AREA
+════════════════════════════════════════ */
+#main{background:var(--light);padding:30px 0 40px}
+#main .grid{display:grid;grid-template-columns:1fr 310px;gap:24px}
+
+/* Section headings */
+.sec-hd{
+  display:flex;justify-content:space-between;
+  align-items:center;margin-bottom:16px
+}
+.sec-hd h3{
+  font-family:'Nunito',sans-serif;
+  font-size:15px;font-weight:800;color:var(--navy);
+  text-transform:uppercase;letter-spacing:.5px;
+  border-left:4px solid var(--gold);padding-left:10px
+}
+.sec-hd a.more{
+  font-size:12px;color:var(--blue);
+  border:1.5px solid var(--blue);
+  padding:3px 11px;border-radius:3px;
+  font-weight:700;transition:.2s
+}
+.sec-hd a.more:hover{background:var(--blue);color:#fff}
+
+/* ── BERITA GRID ── */
+.bgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.bfeat{grid-column:span 2}
+
+.card{
+  background:#fff;border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:0 1px 6px rgba(0,0,0,.08);
+  transition:box-shadow .25s,transform .25s
+}
+.card:hover{box-shadow:0 6px 24px rgba(0,0,0,.13);transform:translateY(-2px)}
+
+/* horizontal featured card */
+.card.h{display:flex}
+.card.h .thumb{
+  width:47%;flex-shrink:0;
+  overflow:hidden;position:relative;
+  background:var(--navy);min-height:230px
+}
+.card.h .thumb img{
+  position:absolute;inset:0;
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .4s
+}
+.card.h:hover .thumb img{transform:scale(1.05)}
+.card.h .body{
+  padding:20px;display:flex;
+  flex-direction:column;justify-content:center
+}
+/* vertical card */
+.card.v .thumb{
+  height:185px;overflow:hidden;
+  background:var(--navy);position:relative
+}
+.card.v .thumb img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .4s
+}
+.card.v:hover .thumb img{transform:scale(1.05)}
+.card.v .body{padding:14px}
+
+/* placeholder patterns */
+.ph{display:flex;align-items:center;justify-content:center}
+.ph i{color:rgba(255,255,255,.18);font-size:52px}
+.ph1{background:linear-gradient(135deg,#002255,#0055a4)}
+.ph2{background:linear-gradient(135deg,#003a7a,#0077cc)}
+.ph3{background:linear-gradient(135deg,#001b40,#004d99)}
+.ph4{background:linear-gradient(135deg,#0a3d70,#1a6bb5)}
+
+.badge{
+  display:inline-block;background:var(--blue);color:#fff;
+  font-size:10px;font-weight:700;padding:2px 9px;
+  border-radius:2px;margin-bottom:8px;
+  text-transform:uppercase;letter-spacing:.4px
+}
+.badge.g{background:#1a7a3a}
+.badge.r{background:#c0392b}
+.badge.o{background:var(--gold)}
+
+.c-title{
+  display:block;font-size:14.5px;font-weight:700;
+  color:var(--navy);line-height:1.4;margin-bottom:8px
+}
+.card.h .c-title{font-size:17px}
+.c-title:hover{color:var(--blue)}
+.c-exc{font-size:13px;color:var(--text2);line-height:1.65;margin:7px 0 10px}
+.c-meta{
+  font-size:11.5px;color:#bbb;
+  display:flex;gap:14px;flex-wrap:wrap
+}
+.c-meta i{margin-right:3px;color:#ccc}
+
+/* ── NEWS LIST ── */
+.nlist{display:flex;flex-direction:column;gap:11px}
+.ni{
+  background:#fff;border-radius:var(--radius);
+  padding:12px 14px;
+  box-shadow:0 1px 4px rgba(0,0,0,.07);
+  display:flex;gap:12px;transition:.2s
+}
+.ni:hover{box-shadow:0 3px 14px rgba(0,0,0,.12)}
+.ni-cal{
+  flex-shrink:0;background:var(--navy);color:#fff;
+  width:46px;text-align:center;border-radius:4px;padding:7px 3px
+}
+.ni-cal .d{font-size:20px;font-weight:800;line-height:1}
+.ni-cal .m{font-size:10px;text-transform:uppercase;opacity:.85}
+.ni-bd a{font-size:13.5px;font-weight:700;color:#333;line-height:1.4}
+.ni-bd a:hover{color:var(--blue)}
+.ni-bd .nm{font-size:11px;color:#bbb;margin-top:4px}
+.ni-bd .nm i{margin-right:3px}
+
+/* ── GALLERY ── */
+.gg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.gi{
+  aspect-ratio:4/3;overflow:hidden;
+  border-radius:4px;cursor:pointer;position:relative
+}
+.gi img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gi:hover img{transform:scale(1.1)}
+.gi .gbg{width:100%;height:100%}
+.gi .gov{
+  position:absolute;inset:0;background:rgba(0,35,80,.5);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:22px;opacity:0;transition:.25s
+}
+.gi:hover .gov{opacity:1}
+.gc1{background:linear-gradient(135deg,#001535,#0055a4)}
+.gc2{background:linear-gradient(135deg,#003471,#0077cc)}
+.gc3{background:linear-gradient(135deg,#c8960c,#f0b429)}
+.gc4{background:linear-gradient(135deg,#002a6e,#003471)}
+.gc5{background:linear-gradient(135deg,#001b4a,#0055a4)}
+.gc6{background:linear-gradient(135deg,#1a4a80,#003471)}
+
+/* ════════════════════════════════════════
+   SIDEBAR
+════════════════════════════════════════ */
+.sidebar{display:flex;flex-direction:column;gap:20px}
+.widget{
+  background:#fff;border-radius:var(--radius);
+  overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.08)
+}
+.whead{
+  background:var(--navy);color:#fff;
+  padding:11px 15px;font-size:13px;font-weight:800;
+  font-family:'Nunito',sans-serif;
+  text-transform:uppercase;letter-spacing:.4px;
+  display:flex;align-items:center;gap:8px
+}
+.wbody{padding:14px}
+
+/* pengumuman */
+.pul li{
+  padding:9px 0;border-bottom:1px solid #f2f2f2;
+  display:flex;gap:9px;align-items:flex-start
+}
+.pul li:last-child{border:none}
+.pul li .ico{color:var(--gold);font-size:11px;margin-top:4px;flex-shrink:0}
+.pul li a{font-size:13px;color:#333;line-height:1.45}
+.pul li a:hover{color:var(--blue)}
+.pdate{font-size:11px;color:#c0c0c0;margin-top:3px}
+
+/* agenda */
+.aul li{
+  display:flex;gap:12px;padding:9px 0;
+  border-bottom:1px solid #f2f2f2;align-items:flex-start
+}
+.aul li:last-child{border:none}
+.a-cal{
+  flex-shrink:0;background:var(--gold);color:var(--navy);
+  width:44px;text-align:center;border-radius:4px;padding:5px 2px
+}
+.a-cal .d{font-size:18px;font-weight:800;line-height:1}
+.a-cal .m{font-size:10px;font-weight:700}
+.a-txt a{font-size:13px;color:#333;font-weight:700;line-height:1.4}
+.a-txt a:hover{color:var(--blue)}
+.a-loc{font-size:11.5px;color:#aaa;margin-top:3px}
+.a-loc i{margin-right:3px}
+
+/* prodi */
+.pro-g{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pro-item{
+  background:var(--light);border-radius:4px;
+  padding:11px 8px;text-align:center;
+  border:1.5px solid transparent;transition:.2s
+}
+.pro-item:hover{background:var(--navy);border-color:var(--navy)}
+.pro-item:hover i,.pro-item:hover a{color:#fff!important}
+.pro-item i{font-size:21px;color:var(--blue);margin-bottom:6px;display:block}
+.pro-item a{font-size:12px;color:var(--navy);font-weight:700;display:block;line-height:1.3}
+
+/* statistik */
+.stat-g{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat-b{
+  text-align:center;background:var(--light);
+  border-radius:4px;padding:13px 8px
+}
+.stat-b .n{
+  font-size:23px;font-weight:800;color:var(--navy);
+  font-family:'Nunito',sans-serif
+}
+.stat-b .l{font-size:11.5px;color:#888;margin-top:3px}
+
+/* link terkait */
+.lkul li{margin-bottom:8px}
+.lkul a{
+  font-size:13px;color:#444;
+  display:flex;align-items:center;gap:5px;transition:.15s
+}
+.lkul a::before{content:'›';color:var(--gold);font-size:16px;line-height:1}
+.lkul a:hover{color:var(--blue);padding-left:4px}
+
+/* youtube */
+.yt-frame{
+  position:relative;padding-top:56.25%;
+  background:#000;border-radius:4px;overflow:hidden;
+  margin-bottom:10px
+}
+.yt-frame iframe{position:absolute;inset:0;width:100%;height:100%}
+
+/* ════════════════════════════════════════
+   LAYANAN SECTION
+════════════════════════════════════════ */
+#layanan{background:var(--navy);padding:30px 0}
+#layanan .sec-hd h3{color:#fff;border-left-color:var(--gold2)}
+.lay-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:15px;margin-top:20px}
+.lay-card{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:6px;padding:20px 12px;
+  text-align:center;color:#fff;transition:.25s
+}
+.lay-card:hover{background:var(--gold);border-color:var(--gold)}
+.lay-card i{font-size:30px;margin-bottom:10px;display:block}
+.lay-card span{font-size:12.5px;font-weight:700;display:block;line-height:1.35}
+
+/* ════════════════════════════════════════
+   SAMBUTAN DEKAN
+════════════════════════════════════════ */
+#sambutan{background:#fff;padding:32px 0}
+.sam-wrap{display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:start}
+.dekan-col{text-align:center}
+.dekan-img{
+  width:170px;height:210px;border-radius:8px;
+  overflow:hidden;margin:0 auto 12px;
+  border:4px solid var(--gold);
+  background:linear-gradient(135deg,var(--blue),var(--navy));
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.2);font-size:68px
+}
+.dekan-img img{width:100%;height:100%;object-fit:cover}
+.dekan-name{font-size:13.5px;font-weight:800;color:var(--navy);line-height:1.35}
+.dekan-role{font-size:12px;color:#888;margin-top:4px}
+.sam-body .blockquote{
+  font-size:14px;font-style:italic;
+  color:#555;line-height:1.8;
+  border-left:4px solid var(--gold);
+  padding-left:16px;margin-bottom:15px
+}
+.sam-body p{font-size:13.5px;color:var(--text2);line-height:1.8;margin-bottom:11px}
+.btn-blue{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--blue);color:#fff;
+  padding:9px 22px;border-radius:4px;
+  font-size:13px;font-weight:700;transition:.2s
+}
+.btn-blue:hover{background:var(--navy)}
+
+/* ════════════════════════════════════════
+   TESTIMONY / ALUMNI
+════════════════════════════════════════ */
+#testimony{background:var(--light);padding:30px 0}
+.tes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
+.tes-card{
+  background:#fff;border-radius:var(--radius);
+  padding:22px 20px;
+  box-shadow:0 1px 6px rgba(0,0,0,.07);
+  position:relative
+}
+.tes-card::before{
+  content:'\201C';font-size:70px;color:var(--gold);
+  line-height:1;position:absolute;top:8px;left:16px;
+  font-family:Georgia,serif;opacity:.5
+}
+.tes-txt{
+  font-size:13px;color:var(--text2);
+  line-height:1.75;padding-top:32px
+}
+.tes-author{display:flex;align-items:center;gap:13px;margin-top:16px}
+.tes-av{
+  width:46px;height:46px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--blue),var(--navy));
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.3);font-size:20px
+}
+.tes-name{font-size:13.5px;font-weight:800;color:var(--navy)}
+.tes-role{font-size:11.5px;color:#aaa;margin-top:2px}
+
+/* ════════════════════════════════════════
+   PIMPINAN
+════════════════════════════════════════ */
+#pimpinan{background:#fff;padding:30px 0}
+.pimp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:20px}
+.pimp-card{
+  background:var(--light);border-radius:var(--radius);
+  padding:22px 14px;text-align:center;
+  border:1.5px solid var(--border);transition:.2s
+}
+.pimp-card:hover{border-color:var(--gold);box-shadow:0 4px 14px rgba(0,0,0,.1)}
+.pimp-av{
+  width:100px;height:100px;border-radius:50%;
+  margin:0 auto 13px;overflow:hidden;
+  background:linear-gradient(135deg,var(--blue),var(--navy));
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.25);font-size:42px;
+  border:3px solid var(--gold)
+}
+.pimp-av img{width:100%;height:100%;object-fit:cover}
+.pimp-name{font-size:13px;font-weight:800;color:var(--navy);line-height:1.35;margin-bottom:4px}
+.pimp-title{font-size:12px;color:#888}
+
+/* ════════════════════════════════════════
+   AKREDITASI
+════════════════════════════════════════ */
+#akreditasi{background:var(--light);padding:26px 0;border-top:1px solid var(--border)}
+.akred-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:20px}
+.akred-item{text-align:center;padding:12px}
+.akred-ring{
+  width:82px;height:82px;border-radius:50%;
+  margin:0 auto 10px;background:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;flex-direction:column;
+  border:3px solid var(--gold)
+}
+.akred-ring .g{font-size:26px;font-weight:800;line-height:1;font-family:'Nunito',sans-serif}
+.akred-ring .lb{font-size:9px;opacity:.75}
+.akred-pn{font-size:12px;font-weight:700;color:var(--navy);line-height:1.3}
+.akred-ps{font-size:10.5px;color:#aaa;margin-top:2px}
+
+/* ════════════════════════════════════════
+   MITRA
+════════════════════════════════════════ */
+#mitra{background:#fff;padding:24px 0;border-top:1px solid var(--border)}
+.mitra-row{
+  display:flex;gap:14px;flex-wrap:wrap;
+  align-items:center;margin-top:18px
+}
+.mitra-item{
+  padding:10px 18px;background:var(--light);
+  border-radius:4px;border:1.5px solid var(--border);
+  filter:grayscale(70%);opacity:.65;transition:.2s
+}
+.mitra-item:hover{filter:none;opacity:1;border-color:var(--gold)}
+.mitra-item .mn{font-size:12px;font-weight:800;color:var(--navy);text-align:center;line-height:1.45}
+
+/* ════════════════════════════════════════
+   FOOTER
+════════════════════════════════════════ */
+#footer{background:#002050;color:rgba(255,255,255,.78)}
+#ft-top{padding:36px 0}
+.ft-g{display:grid;grid-template-columns:2.2fr 1fr 1fr 1.5fr;gap:30px}
+.ft-logo-row{display:flex;align-items:center;gap:13px;margin-bottom:14px}
+.ft-logo-row img{
+  height:56px;width:auto;
+  /* invert to white for dark background */
+  filter:brightness(0) invert(1) opacity(.9)
+}
+.ft-brand{font-family:'Nunito',sans-serif;font-size:16px;font-weight:800;color:#fff;line-height:1.2}
+.ft-brand small{display:block;font-size:11px;font-weight:400;color:rgba(255,255,255,.5);margin-top:2px}
+.ft-about{font-size:12.5px;line-height:1.85;color:rgba(255,255,255,.68)}
+.ft-socials{display:flex;gap:8px;margin-top:14px}
+.ft-socials a{
+  width:34px;height:34px;border-radius:50%;
+  background:rgba(255,255,255,.1);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:13px;transition:.2s
+}
+.ft-socials a:hover{background:var(--gold)}
+.ft-col h4{
+  color:var(--gold2);font-size:13px;font-weight:800;
+  margin-bottom:14px;padding-bottom:8px;
+  border-bottom:1px solid rgba(255,255,255,.1);
+  text-transform:uppercase;letter-spacing:.5px;
+  font-family:'Nunito',sans-serif
+}
+.ft-ul li{margin-bottom:9px}
+.ft-ul a{
+  font-size:13px;color:rgba(255,255,255,.7);
+  display:flex;align-items:center;gap:5px;transition:.15s
+}
+.ft-ul a::before{content:'›';color:var(--gold2);font-size:16px;line-height:1}
+.ft-ul a:hover{color:#fff;padding-left:4px}
+.ft-contact{font-size:13px;color:rgba(255,255,255,.72);line-height:2.1}
+.ft-contact i{width:18px;color:var(--gold2)}
+#ft-bottom{
+  background:rgba(0,0,0,.3);padding:12px 0;
+  font-size:12px;color:rgba(255,255,255,.55)
+}
+#ft-bottom .inner{display:flex;justify-content:space-between;align-items:center}
+#ft-bottom a{color:var(--gold2)}
+#ft-bottom a:hover{text-decoration:underline}
+
+/* ════════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════════ */
+@media(max-width:960px){
+  #main .grid{grid-template-columns:1fr}
+  .bgrid{grid-template-columns:1fr}
+  .bfeat{grid-column:span 1}
+  .card.h{flex-direction:column}
+  .card.h .thumb{width:100%;height:230px;min-height:unset}
+  .lay-grid{grid-template-columns:repeat(3,1fr)}
+  .pimp-grid{grid-template-columns:repeat(2,1fr)}
+  .akred-grid{grid-template-columns:repeat(3,1fr)}
+  .ft-g{grid-template-columns:1fr 1fr}
+  .tes-grid{grid-template-columns:1fr}
+  .sam-wrap{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .slider{height:280px}
+  #site-header .inner{flex-direction:column;align-items:flex-start;gap:10px}
+  .header-right{align-items:flex-start}
+  .lay-grid{grid-template-columns:repeat(2,1fr)}
+  .pimp-grid{grid-template-columns:repeat(2,1fr)}
+  .ft-g{grid-template-columns:1fr}
+  .akred-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════ TOP BAR ══════ -->
+<div id="topbar">
+  <div class="inner">
+    <div class="tb-left">
+      <span><i class="fas fa-envelope"></i> fisip@umrah.ac.id</span>
+      <span><i class="fas fa-phone"></i> (0771) 8038666</span>
+      <span><i class="fas fa-map-marker-alt"></i> Jl. Raya Dompak, Tanjungpinang 29100</span>
+    </div>
+    <div class="tb-right">
+      <a class="tb-icon" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a class="tb-icon" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a class="tb-icon" href="https://www.instagram.com/fisipumrah.official/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a class="tb-icon" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+      <div class="tb-lang">
+        <a href="#" class="active">ID</a>
+        <a href="#">EN</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ HEADER ══════ -->
+<div id="site-header">
+  <div style="padding:0">
+    <!-- 
+      Banner header penuh lebar — menggunakan gambar asli dari URL yang diberikan.
+      Gambar ini menampilkan logo dan nama lengkap FISIP UMRAH.
+    -->
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 18px;max-width:1160px;margin:0 auto">
+      <!-- Logo / Banner kiri -->
+      <div style="flex:1">
+        <img
+          src="https://fisip.umrah.ac.id/wp-content/uploads/2025/09/HEADER-FISIP-UMRAH-WEBSITE1.png"
+          alt="FISIP UMRAH – Fakultas Ilmu Sosial dan Ilmu Politik Universitas Maritim Raja Ali Haji"
+          style="height:88px;width:auto;max-width:600px;object-fit:contain"
+          onerror="
+            this.style.display='none';
+            document.getElementById('hdr-fallback').style.display='flex';
+          "
+        />
+        <!-- Fallback: logo SVG + teks jika gambar ditolak server -->
+        <div id="hdr-fallback" style="display:none;align-items:center;gap:13px">
+          <div style="width:76px;height:76px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;border:3px solid var(--gold);flex-shrink:0">
+            <svg viewBox="0 0 80 80" width="58" height="58">
+              <circle cx="40" cy="40" r="35" fill="none" stroke="#c8960c" stroke-width="2"/>
+              <text x="40" y="34" text-anchor="middle" fill="#fff" font-size="10.5" font-weight="bold" font-family="serif">FISIP</text>
+              <text x="40" y="48" text-anchor="middle" fill="#c8960c" font-size="7.5" font-family="serif">UMRAH</text>
+              <path d="M12 57 Q40 67 68 57" fill="none" stroke="#c8960c" stroke-width="1.5"/>
+              <path d="M22 61 L40 51 L58 61" fill="none" stroke="#fff" stroke-width="1.2"/>
+            </svg>
+          </div>
+          <div style="border-left:4px solid var(--gold);padding-left:13px">
+            <div style="font-size:17px;font-weight:800;color:var(--navy);font-family:'Nunito',sans-serif;text-transform:uppercase;letter-spacing:.3px;line-height:1.2">Fakultas Ilmu Sosial dan Ilmu Politik</div>
+            <div style="font-size:12px;color:#888;margin-top:4px">Universitas Maritim Raja Ali Haji · Kepulauan Riau</div>
+          </div>
+        </div>
+      </div>
+      <!-- Kanan: search + link -->
+      <div class="header-right">
+        <div class="searchbox">
+          <input type="text" placeholder="Cari informasi di FISIP UMRAH…"/>
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="hlinks">
+          <a href="#">SIAKAD</a>
+          <a href="#">E-Learning</a>
+          <a href="#">Jurnal FISIP</a>
+          <a href="#">Repository</a>
+          <a href="#">Email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ NAVBAR ══════ -->
+<nav id="nav">
+  <div class="inner">
+    <a class="nav-home" href="#" title="Beranda"><i class="fas fa-home"></i></a>
+    <ul class="nav-menu">
+      <li class="cur"><a href="#">Beranda</a></li>
+      <li>
+        <a href="#">Profil <i class="fas fa-chevron-down arr"></i></a>
+        <ul class="ddrop">
+          <li><a href="#">Sekapur Sirih / Sejarah</a></li>
+          <li><a href="#">Visi &amp; Misi</a></li>
+          <li><a href="#">Struktur Organisasi</a></li>
+          <li><a href="#">Daftar Dosen</a></li>
+          <li><a href="#">Staf Tenaga Kependidikan</a></li>
+          <li><a href="#">Rencana Pengembangan</a></li>
+          <li><a href="#">Alamat &amp; Kontak</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Program Studi <i class="fas fa-chevron-down arr"></i></a>
+        <ul class="ddrop">
+          <li><a href="https://ian.fisip.umrah.ac.id" target="_blank">Ilmu Administrasi Negara (S1)</a></li>
+          <li><a href="https://ip.fisip.umrah.ac.id" target="_blank">Ilmu Pemerintahan (S1)</a></li>
+          <li><a href="https://sos.fisip.umrah.ac.id" target="_blank">Sosiologi (S1)</a></li>
+          <li><a href="https://hi.fisip.umrah.ac.id" target="_blank">Ilmu Hubungan Internasional (S1)</a></li>
+          <li><a href="#">Ilmu Komunikasi (S1)</a></li>
+          <li><a href="#">Ilmu Hukum (S1)</a></li>
+          <li><a href="#">Magister Ilmu Pemerintahan (S2)</a></li>
+          <li><a href="#">Magister Adm. Publik (S2)</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Akademik <i class="fas fa-chevron-down arr"></i></a>
+        <ul class="ddrop">
+          <li><a href="#">Kalender Akademik</a></li>
+          <li><a href="#">Kurikulum</a></li>
+          <li><a href="#">Jadwal Kuliah</a></li>
+          <li><a href="#">Pedoman Skripsi / Tesis</a></li>
+          <li><a href="#">Formulir Akademik</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Penelitian <i class="fas fa-chevron-down arr"></i></a>
+        <ul class="ddrop">
+          <li><a href="#">Jurnal FISIP UMRAH</a></li>
+          <li><a href="#">Publikasi Dosen</a></li>
+          <li><a href="#">Pengabdian Masyarakat</a></li>
+          <li><a href="#">Hibah Penelitian</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Kemahasiswaan <i class="fas fa-chevron-down arr"></i></a>
+        <ul class="ddrop">
+          <li><a href="#">Beasiswa</a></li>
+          <li><a href="#">Himpunan Mahasiswa (HIMA)</a></li>
+          <li><a href="#">Prestasi Mahasiswa</a></li>
+          <li><a href="#">Alumni</a></li>
+          <li><a href="#">KKN</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Informasi <i class="fas fa-chevron-down arr"></i></a>
+        <ul class="ddrop">
+          <li><a href="#">Berita &amp; Informasi</a></li>
+          <li><a href="#">Pengumuman</a></li>
+          <li><a href="#">Agenda</a></li>
+          <li><a href="#">Galeri</a></li>
+          <li><a href="#">Video</a></li>
+          <li><a href="#">Unduhan / Layanan</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Layanan <i class="fas fa-chevron-down arr"></i></a>
+        <ul class="ddrop">
+          <li><a href="#">Sertifikat Akreditasi</a></li>
+          <li><a href="#">Pedoman Skripsi FISIP</a></li>
+          <li><a href="#">Formulir Permohonan Yudisium</a></li>
+          <li><a href="#">Surat Akademik</a></li>
+          <li><a href="#">Legalisir Ijazah</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ══════ HERO SLIDER ══════ -->
+<section id="hero">
+  <div class="slider" id="sl">
+
+    <!-- Slide 1: gambar header utama FISIP UMRAH -->
+    <div class="slide sl1 on">
+      <div class="slide-cap">
+        <span class="s-badge">Selamat Datang</span>
+        <h2>Menuju Kecemerlangan FISIP<br>dalam Satu Gurindam</h2>
+        <p>Fakultas Ilmu Sosial dan Ilmu Politik Universitas Maritim Raja Ali Haji — Pusat pendidikan sosial, politik, dan pemerintahan berbasis kemaritiman di Kepulauan Riau.</p>
+        <a href="#" class="s-btn">Pelajari Lebih Lanjut <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Slide 2: Ormawa Gemilang -->
+    <div class="slide sl2">
+      <div class="slide-cap">
+        <span class="s-badge">Kegiatan Terbaru</span>
+        <h2>Ormawa Gemilang FISIP Jaya</h2>
+        <p>Kolaborasi Antar Mahasiswa, Bersatu Dalam Aksi Mewujudkan Prestasi — Mini Soccer, Domino, Mobile Legends, Infografis, Essay dan Puisi.</p>
+        <a href="#" class="s-btn">Lihat Selengkapnya <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Slide 3: PMB / background biru -->
+    <div class="slide sl3">
+      <svg class="slide-deco" viewBox="0 0 240 240">
+        <circle cx="120" cy="120" r="110" fill="none" stroke="white" stroke-width="1.5"/>
+        <circle cx="120" cy="120" r="85" fill="none" stroke="white" stroke-width="1"/>
+        <circle cx="120" cy="120" r="60" fill="none" stroke="white" stroke-width=".6"/>
+        <path d="M30 120 Q75 70 120 120 Q165 170 210 120" fill="none" stroke="white" stroke-width="1.2"/>
+        <path d="M45 155 L120 85 L195 155" fill="none" stroke="white" stroke-width="1"/>
+      </svg>
+      <div class="slide-cap">
+        <span class="s-badge">Penerimaan Mahasiswa Baru 2025/2026</span>
+        <h2>Bergabunglah Bersama Kami<br>di FISIP UMRAH</h2>
+        <p>Jadilah bagian dari generasi unggul yang membawa perubahan positif untuk masyarakat maritim Kepulauan Riau dan Indonesia.</p>
+        <a href="https://penerimaan.umrah.ac.id" target="_blank" class="s-btn">Daftar Sekarang <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="s-arrows">
+      <button onclick="slPrev()"><i class="fas fa-chevron-left"></i></button>
+      <button onclick="slNext()"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <div class="s-dots">
+      <span class="on" onclick="slGo(0)"></span>
+      <span onclick="slGo(1)"></span>
+      <span onclick="slGo(2)"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ TICKER ══════ -->
+<div id="ticker">
+  <div class="ticker-tag"><i class="fas fa-bullhorn"></i> Pengumuman</div>
+  <div class="ticker-track">
+    <div class="ticker-belt">
+      <a href="#">Pendaftaran Yudisium Semester Genap 2024/2025 — Batas Akhir 31 Maret 2025</a>
+      <a href="#">Jadwal UAS Semester Genap T.A. 2024/2025 telah diterbitkan — Segera Cek SIAKAD</a>
+      <a href="#">Pengumuman Seleksi Penerimaan Mahasiswa Baru Jalur Mandiri 2025/2026</a>
+      <a href="#">Hasil Seleksi Beasiswa KIP Kuliah Periode 2025 — Segera Cek Akun Anda</a>
+      <a href="#">Seminar Nasional Ilmu Sosial dan Politik FISIP UMRAH — Pendaftaran Presenter Dibuka</a>
+      <!-- duplikat untuk seamless loop -->
+      <a href="#">Pendaftaran Yudisium Semester Genap 2024/2025 — Batas Akhir 31 Maret 2025</a>
+      <a href="#">Jadwal UAS Semester Genap T.A. 2024/2025 telah diterbitkan — Segera Cek SIAKAD</a>
+      <a href="#">Pengumuman Seleksi Penerimaan Mahasiswa Baru Jalur Mandiri 2025/2026</a>
+      <a href="#">Hasil Seleksi Beasiswa KIP Kuliah Periode 2025 — Segera Cek Akun Anda</a>
+      <a href="#">Seminar Nasional Ilmu Sosial dan Politik FISIP UMRAH — Pendaftaran Presenter Dibuka</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ MAIN ══════ -->
+<div id="main">
+  <div class="inner">
+    <div class="grid">
+
+      <!-- ── KIRI / KONTEN UTAMA ── -->
+      <div>
+
+        <!-- BERITA TERKINI -->
+        <div style="margin-bottom:28px">
+          <div class="sec-hd">
+            <h3><i class="fas fa-newspaper" style="margin-right:8px;color:var(--gold)"></i>Berita Terkini</h3>
+            <a href="#" class="more">Indeks Berita »</a>
+          </div>
+          <div class="bgrid">
+
+            <!-- Featured horizontal -->
+            <div class="card h bfeat">
+              <div class="thumb ph1">
+                <img
+                  src="https://fisip.umrah.ac.id/wp-content/uploads/2025/09/HEADER-FISIP-UMRAH-WEBSITE1.png"
+                  alt="Workshop FISIP UMRAH"
+                  onerror="this.style.display='none'"
+                />
+                <div class="ph"><i class="fas fa-university"></i></div>
+              </div>
+              <div class="body">
+                <span class="badge">Akademik</span>
+                <a href="#" class="c-title">FISIP UMRAH Gelar Workshop Penulisan Karya Ilmiah bagi Mahasiswa Semester Akhir Tahun Akademik 2024/2025</a>
+                <p class="c-exc">Fakultas Ilmu Sosial dan Ilmu Politik UMRAH menyelenggarakan workshop intensif penulisan karya ilmiah yang diikuti lebih dari 150 mahasiswa semester akhir. Kegiatan ini bertujuan meningkatkan kualitas skripsi dan publikasi ilmiah mahasiswa di seluruh program studi di lingkungan FISIP UMRAH.</p>
+                <div class="c-meta">
+                  <span><i class="fas fa-calendar-alt"></i>18 Maret 2025</span>
+                  <span><i class="fas fa-user"></i>Admin FISIP</span>
+                  <span><i class="fas fa-eye"></i>342</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Berita 2 -->
+            <div class="card v">
+              <div class="thumb ph2">
+                <img
+                  src="https://fisip.umrah.ac.id/wp-content/uploads/2025/09/ormawa-gemilang.jpg"
+                  alt="Ormawa Gemilang"
+                  onerror="this.style.display='none'"
+                />
+                <div class="ph"><i class="fas fa-users"></i></div>
+              </div>
+              <div class="body">
+                <span class="badge o">Kemahasiswaan</span>
+                <a href="#" class="c-title">Ormawa Gemilang FISIP Jaya — Kolaborasi Antar Mahasiswa Mewujudkan Prestasi</a>
+                <div class="c-meta">
+                  <span><i class="fas fa-calendar-alt"></i>14 Mar 2025</span>
+                  <span><i class="fas fa-eye"></i>289</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Berita 3 -->
+            <div class="card v">
+              <div class="thumb ph3">
+                <img
+                  src="https://fisip.umrah.ac.id/wp-content/uploads/2024/09/Gedung-FISIP-UMRAH.jpg"
+                  alt="Gedung FISIP UMRAH"
+                  onerror="this.style.display='none'"
+                />
+                <div class="ph"><i class="fas fa-handshake"></i></div>
+              </div>
+              <div class="body">
+                <span class="badge g">Kerjasama</span>
+                <a href="#" class="c-title">FISIP UMRAH Tanda Tangani MoU dengan Pemerintah Provinsi Kepulauan Riau</a>
+                <div class="c-meta">
+                  <span><i class="fas fa-calendar-alt"></i>15 Mar 2025</span>
+                  <span><i class="fas fa-eye"></i>218</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- KABAR FISIP -->
+        <div style="margin-bottom:28px">
+          <div class="sec-hd">
+            <h3><i class="fas fa-list" style="margin-right:8px;color:var(--gold)"></i>Kabar FISIP</h3>
+            <a href="#" class="more">Indeks Kabar FISIP »</a>
+          </div>
+          <div class="nlist">
+            <div class="ni">
+              <div class="ni-cal"><div class="d">10</div><div class="m">Mar</div></div>
+              <div class="ni-bd">
+                <a href="#">Dekan FISIP UMRAH Hadiri Rapat Koordinasi Nasional Dekan FISIP Se-Indonesia di Jakarta</a>
+                <div class="nm"><i class="fas fa-tag"></i>Kegiatan Pimpinan &nbsp;·&nbsp; <i class="fas fa-eye"></i> 176</div>
+              </div>
+            </div>
+            <div class="ni">
+              <div class="ni-cal"><div class="d">07</div><div class="m">Mar</div></div>
+              <div class="ni-bd">
+                <a href="#">Program Studi Sosiologi FISIP UMRAH Gelar Kuliah Umum Bersama Pakar Sosiologi Kemaritiman Nasional</a>
+                <div class="nm"><i class="fas fa-tag"></i>Akademik &nbsp;·&nbsp; <i class="fas fa-eye"></i> 231</div>
+              </div>
+            </div>
+            <div class="ni">
+              <div class="ni-cal"><div class="d">02</div><div class="m">Mar</div></div>
+              <div class="ni-bd">
+                <a href="#">Pembukaan Penerimaan Mahasiswa Baru Jalur Prestasi Tahun Akademik 2025/2026 Resmi Dibuka</a>
+                <div class="nm"><i class="fas fa-tag"></i>Penerimaan &nbsp;·&nbsp; <i class="fas fa-eye"></i> 589</div>
+              </div>
+            </div>
+            <div class="ni">
+              <div class="ni-cal"><div class="d">28</div><div class="m">Feb</div></div>
+              <div class="ni-bd">
+                <a href="#">Tim Peneliti FISIP UMRAH Publikasikan Hasil Riset di Jurnal Internasional Terindeks Scopus</a>
+                <div class="nm"><i class="fas fa-tag"></i>Penelitian &nbsp;·&nbsp; <i class="fas fa-eye"></i> 318</div>
+              </div>
+            </div>
+            <div class="ni">
+              <div class="ni-cal"><div class="d">24</div><div class="m">Feb</div></div>
+              <div class="ni-bd">
+                <a href="#">HIMA Ilmu Pemerintahan Gelar Bakti Sosial di Wilayah Perbatasan Kepulauan Riau</a>
+                <div class="nm"><i class="fas fa-tag"></i>Kemahasiswaan &nbsp;·&nbsp; <i class="fas fa-eye"></i> 202</div>
+              </div>
+            </div>
+            <div class="ni">
+              <div class="ni-cal"><div class="d">18</div><div class="m">Feb</div></div>
+              <div class="ni-bd">
+                <a href="#">FISIP UMRAH Terima Kunjungan Delegasi Universiti Malaysia Terengganu dalam Rangka Kerjasama Akademik</a>
+                <div class="nm"><i class="fas fa-tag"></i>Kerjasama &nbsp;·&nbsp; <i class="fas fa-eye"></i> 144</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIDEO YOUTUBE -->
+        <div style="margin-bottom:28px">
+          <div class="sec-hd">
+            <h3><i class="fab fa-youtube" style="margin-right:8px;color:#ff0000"></i>Video FISIP UMRAH Official</h3>
+            <a href="https://www.youtube.com/@fisipumrah" target="_blank" class="more">Kanal YouTube »</a>
+          </div>
+          <div class="yt-frame">
+            <iframe
+              src="https://www.youtube.com/embed/videoseries?list=PLrAXtmErZgOeiKm4CfnlhLIHoGl0iOCYH"
+              title="FISIP UMRAH Official Channel"
+              frameborder="0"
+              allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <!-- GALERI -->
+        <div>
+          <div class="sec-hd">
+            <h3><i class="fas fa-images" style="margin-right:8px;color:var(--gold)"></i>Galeri Kegiatan</h3>
+            <a href="#" class="more">Lihat Semua »</a>
+          </div>
+          <div class="gg">
+            <div class="gi">
+              <div class="gbg gc1">
+                <img
+                  src="https://fisip.umrah.ac.id/wp-content/uploads/2025/09/HEADER-FISIP-UMRAH-WEBSITE1.png"
+                  alt="Gedung FISIP UMRAH"
+                  onerror="this.style.display='none'"
+                />
+              </div>
+              <div class="gov"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gi">
+              <div class="gbg gc2">
+                <img
+                  src="https://fisip.umrah.ac.id/wp-content/uploads/2024/09/Gedung-FISIP-UMRAH.jpg"
+                  alt="Kampus FISIP"
+                  onerror="this.style.display='none'"
+                />
+              </div>
+              <div class="gov"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gi"><div class="gbg gc3"></div><div class="gov"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gi"><div class="gbg gc4"></div><div class="gov"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gi"><div class="gbg gc5"></div><div class="gov"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gi"><div class="gbg gc6"></div><div class="gov"><i class="fas fa-search-plus"></i></div></div>
+          </div>
+        </div>
+
+      </div><!-- /kiri -->
+
+      <!-- ── SIDEBAR ── -->
+      <aside class="sidebar">
+
+        <!-- PENGUMUMAN -->
+        <div class="widget">
+          <div class="whead"><i class="fas fa-bell"></i> Pengumuman</div>
+          <div class="wbody">
+            <ul class="pul">
+              <li>
+                <span class="ico"><i class="fas fa-angle-right"></i></span>
+                <div><a href="#">Pendaftaran Yudisium Semester Genap 2024/2025</a><div class="pdate">20 Mar 2025</div></div>
+              </li>
+              <li>
+                <span class="ico"><i class="fas fa-angle-right"></i></span>
+                <div><a href="#">Jadwal Bimbingan Akademik Mahasiswa Baru 2025</a><div class="pdate">17 Mar 2025</div></div>
+              </li>
+              <li>
+                <span class="ico"><i class="fas fa-angle-right"></i></span>
+                <div><a href="#">Pengumuman Hasil Seleksi Beasiswa KIP Kuliah 2025</a><div class="pdate">14 Mar 2025</div></div>
+              </li>
+              <li>
+                <span class="ico"><i class="fas fa-angle-right"></i></span>
+                <div><a href="#">Perubahan Jadwal UTS Semester Genap 2024/2025</a><div class="pdate">10 Mar 2025</div></div>
+              </li>
+              <li>
+                <span class="ico"><i class="fas fa-angle-right"></i></span>
+                <div><a href="#">Pengumpulan Laporan KKN Periode I 2025</a><div class="pdate">05 Mar 2025</div></div>
+              </li>
+            </ul>
+            <a href="#" style="display:block;text-align:center;font-size:12px;color:var(--blue);margin-top:10px;font-weight:700">Indeks Pengumuman »</a>
+          </div>
+        </div>
+
+        <!-- AGENDA -->
+        <div class="widget">
+          <div class="whead"><i class="fas fa-calendar-alt"></i> Agenda</div>
+          <div class="wbody">
+            <ul class="aul">
+              <li>
+                <div class="a-cal"><div class="d">25</div><div class="m">Mar</div></div>
+                <div class="a-txt">
+                  <a href="#">Seminar Nasional Pemerintahan Daerah 2025</a>
+                  <div class="a-loc"><i class="fas fa-map-marker-alt"></i>Aula Utama FISIP UMRAH</div>
+                </div>
+              </li>
+              <li>
+                <div class="a-cal"><div class="d">28</div><div class="m">Mar</div></div>
+                <div class="a-txt">
+                  <a href="#">Workshop Penulisan Proposal Penelitian Dosen</a>
+                  <div class="a-loc"><i class="fas fa-map-marker-alt"></i>Ruang Seminar Lt. 2</div>
+                </div>
+              </li>
+              <li>
+                <div class="a-cal"><div class="d">02</div><div class="m">Apr</div></div>
+                <div class="a-txt">
+                  <a href="#">Rapat Senat Fakultas Triwulan I 2025</a>
+                  <div class="a-loc"><i class="fas fa-map-marker-alt"></i>Ruang Rapat Dekanat</div>
+                </div>
+              </li>
+              <li>
+                <div class="a-cal"><div class="d">10</div><div class="m">Apr</div></div>
+                <div class="a-txt">
+                  <a href="#">Temu Alumni FISIP UMRAH Angkatan 2015–2020</a>
+                  <div class="a-loc"><i class="fas fa-map-marker-alt"></i>Gedung Serbaguna UMRAH</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PROGRAM STUDI -->
+        <div class="widget">
+          <div class="whead"><i class="fas fa-graduation-cap"></i> Program Studi</div>
+          <div class="wbody">
+            <div style="font-size:11.5px;font-weight:800;color:var(--navy);margin-bottom:8px;text-transform:uppercase;letter-spacing:.3px">Sarjana (S1)</div>
+            <div class="pro-g">
+              <div class="pro-item"><i class="fas fa-landmark"></i><a href="https://ian.fisip.umrah.ac.id" target="_blank">Ilmu Administrasi Negara</a></div>
+              <div class="pro-item"><i class="fas fa-balance-scale"></i><a href="https://ip.fisip.umrah.ac.id" target="_blank">Ilmu Pemerintahan</a></div>
+              <div class="pro-item"><i class="fas fa-users"></i><a href="https://sos.fisip.umrah.ac.id" target="_blank">Sosiologi</a></div>
+              <div class="pro-item"><i class="fas fa-globe-asia"></i><a href="https://hi.fisip.umrah.ac.id" target="_blank">Hub. Internasional</a></div>
+              <div class="pro-item"><i class="fas fa-broadcast-tower"></i><a href="#">Ilmu Komunikasi</a></div>
+              <div class="pro-item"><i class="fas fa-gavel"></i><a href="#">Ilmu Hukum</a></div>
+            </div>
+            <div style="margin-top:10px;padding-top:10px;border-top:1px solid #f0f0f0">
+              <div style="font-size:11.5px;font-weight:800;color:var(--navy);margin-bottom:8px;text-transform:uppercase;letter-spacing:.3px">Pascasarjana (S2)</div>
+              <div class="pro-g">
+                <div class="pro-item"><i class="fas fa-university"></i><a href="#">Magister Ilmu Pemerintahan</a></div>
+                <div class="pro-item"><i class="fas fa-cogs"></i><a href="#">Magister Adm. Publik</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STATISTIK -->
+        <div class="widget">
+          <div class="whead"><i class="fas fa-chart-bar"></i> Statistik FISIP</div>
+          <div class="wbody">
+            <div class="stat-g">
+              <div class="stat-b"><div class="n">2.400+</div><div class="l">Mahasiswa Aktif</div></div>
+              <div class="stat-b"><div class="n">60</div><div class="l">Dosen</div></div>
+              <div class="stat-b"><div class="n">8</div><div class="l">Program Studi</div></div>
+              <div class="stat-b"><div class="n">4.000+</div><div class="l">Alumni</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LINK TERKAIT -->
+        <div class="widget">
+          <div class="whead"><i class="fas fa-link"></i> Link Terkait</div>
+          <div class="wbody">
+            <ul class="lkul">
+              <li><a href="https://umrah.ac.id" target="_blank">Universitas Maritim Raja Ali Haji</a></li>
+              <li><a href="#">SIAKAD UMRAH</a></li>
+              <li><a href="#">E-Learning UMRAH</a></li>
+              <li><a href="#">Repository UMRAH</a></li>
+              <li><a href="#">Jurnal FISIP UMRAH</a></li>
+              <li><a href="#">Kemdikbudristek RI</a></li>
+              <li><a href="#">LLDIKTI Wilayah X</a></li>
+              <li><a href="#">BAN-PT</a></li>
+              <li><a href="#">PDDikti</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </aside>
+
+    </div><!-- /grid -->
+  </div>
+</div>
+
+<!-- ══════ LAYANAN ══════ -->
+<section id="layanan">
+  <div class="inner">
+    <div class="sec-hd">
+      <h3><i class="fas fa-concierge-bell" style="margin-right:8px;color:var(--gold2)"></i>Layanan Akademik &amp; Administrasi</h3>
+    </div>
+    <div class="lay-grid">
+      <a href="#" class="lay-card"><i class="fas fa-file-alt"></i><span>Surat Akademik</span></a>
+      <a href="#" class="lay-card"><i class="fas fa-certificate"></i><span>Legalisir Ijazah</span></a>
+      <a href="#" class="lay-card"><i class="fas fa-book-open"></i><span>Jadwal Kuliah</span></a>
+      <a href="#" class="lay-card"><i class="fas fa-laptop-code"></i><span>E-Learning</span></a>
+      <a href="#" class="lay-card"><i class="fas fa-chart-line"></i><span>Tracer Study</span></a>
+      <a href="#" class="lay-card"><i class="fas fa-download"></i><span>Unduhan Formulir</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ SAMBUTAN DEKAN ══════ -->
+<section id="sambutan">
+  <div class="inner">
+    <div class="sec-hd">
+      <h3><i class="fas fa-comments" style="margin-right:8px;color:var(--gold)"></i>Sambutan Dekan FISIP UMRAH</h3>
+    </div>
+    <div class="sam-wrap">
+      <div class="dekan-col">
+        <div class="dekan-img">
+          <img
+            src="https://fisip.umrah.ac.id/wp-content/uploads/2025/10/Dekan-FISIP-UMRAH.jpg"
+            alt="Dekan FISIP UMRAH"
+            onerror="this.style.display='none'"
+          />
+          <i class="fas fa-user-tie"></i>
+        </div>
+        <div class="dekan-name">Assoc. Prof. Dr. Sayed Fauzan Riyadi, S.Sos., IMAS</div>
+        <div class="dekan-role">Dekan FISIP UMRAH<br>Periode 2024–2028</div>
+      </div>
+      <div class="sam-body">
+        <p class="blockquote">"Pengalaman saudara dan saudari tidak pernah berhenti setelah lulus dari Fakultas Ilmu Sosial dan Ilmu Politik Universitas Maritim Raja Ali Haji. Belajar di FISIP UMRAH bukan hanya soal teori politik, pemerintahan, dan sosial, tetapi juga tentang bagaimana kita bisa menjadi agen perubahan bagi masyarakat."</p>
+        <p>Assalamu'alaikum Warahmatullahi Wabarakatuh. Selamat datang di laman resmi Fakultas Ilmu Sosial dan Ilmu Politik (FISIP) Universitas Maritim Raja Ali Haji. Kami berkomitmen untuk terus meningkatkan kualitas pendidikan, penelitian, dan pengabdian kepada masyarakat demi menghasilkan lulusan yang berintegritas, adaptif, dan berdaya saing tinggi.</p>
+        <p>FISIP UMRAH mengelola 6 Program Studi Strata 1 dan 2 Program Pascasarjana, dengan visi menjadi Pusat Kecemerlangan Pendidikan Tinggi, Riset, Mari-Sociopreneurship dan Tamadun Maritim di Kawasan Asia Tenggara. Bersama seluruh sivitas akademika, kami terus bergerak menuju FISIP yang unggul dan bermartabat.</p>
+        <a href="#" class="btn-blue">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ TESTIMONY ══════ -->
+<section id="testimony">
+  <div class="inner">
+    <div class="sec-hd">
+      <h3><i class="fas fa-quote-left" style="margin-right:8px;color:var(--gold)"></i>Kata Alumni &amp; Mahasiswa</h3>
+    </div>
+    <div class="tes-grid">
+      <div class="tes-card">
+        <p class="tes-txt">Pengalaman saudara dan saudari tidak pernah berhenti setelah lulus dari Fakultas Ilmu Sosial dan Ilmu Politik Universitas Maritim Raja Ali Haji. Belajar di FISIP UMRAH bukan hanya soal teori politik, pemerintahan, dan sosial, tetapi juga tentang bagaimana kita bisa menjadi agen perubahan bagi masyarakat.</p>
+        <div class="tes-author">
+          <div class="tes-av"><i class="fas fa-user"></i></div>
+          <div>
+            <div class="tes-name">Ahmad Fauzi, S.IP</div>
+            <div class="tes-role">Alumni Ilmu Pemerintahan · Anggota KPU Kab.</div>
+          </div>
+        </div>
+      </div>
+      <div class="tes-card">
+        <p class="tes-txt">Lingkungan kampus yang penuh semangat dan dosen yang inspiratif membuat saya yakin, FISIP UMRAH adalah tempat terbaik untuk membangun karakter dan kompetensi sebagai pemimpin masa depan yang peduli pada masyarakat maritim dan perbatasan.</p>
+        <div class="tes-author">
+          <div class="tes-av"><i class="fas fa-user"></i></div>
+          <div>
+            <div class="tes-name">Rizky Pratama</div>
+            <div class="tes-role">Mahasiswa Aktif Sosiologi 2022</div>
+          </div>
+        </div>
+      </div>
+      <div class="tes-card">
+        <p class="tes-txt">Sebagai alumni FISIP UMRAH, saya merasa bangga pernah ditempa di lingkungan yang kaya akan nilai, ilmu, dan semangat maritim. Fakultas ini mengajarkan bahwa perubahan besar selalu dimulai dari langkah kecil dan niat tulus untuk berbuat bagi masyarakat.</p>
+        <div class="tes-author">
+          <div class="tes-av"><i class="fas fa-user"></i></div>
+          <div>
+            <div class="tes-name">Siti Rahmawati, M.Si</div>
+            <div class="tes-role">Alumni Adm. Negara 2017 · Dosen STISIP Kepri</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ PIMPINAN ══════ -->
+<section id="pimpinan">
+  <div class="inner">
+    <div class="sec-hd">
+      <h3><i class="fas fa-users" style="margin-right:8px;color:var(--gold)"></i>Pimpinan Fakultas</h3>
+    </div>
+    <div class="pimp-grid">
+      <div class="pimp-card">
+        <div class="pimp-av">
+          <img src="https://fisip.umrah.ac.id/wp-content/uploads/2025/10/Dekan-FISIP-UMRAH.jpg" alt="Dekan" onerror="this.style.display='none'"/>
+          <i class="fas fa-user-tie"></i>
+        </div>
+        <div class="pimp-name">Assoc. Prof. Dr. Sayed Fauzan Riyadi, S.Sos., IMAS</div>
+        <div class="pimp-title">Dekan FISIP UMRAH</div>
+      </div>
+      <div class="pimp-card">
+        <div class="pimp-av"><i class="fas fa-user-tie"></i></div>
+        <div class="pimp-name">Dr. Oksep Adhayanto, SH., MH</div>
+        <div class="pimp-title">Wakil Dekan I Bid. Akademik</div>
+      </div>
+      <div class="pimp-card">
+        <div class="pimp-av"><i class="fas fa-user-tie"></i></div>
+        <div class="pimp-name">Dr. Marisa Elsera, M.Si</div>
+        <div class="pimp-title">Wakil Dekan II Bid. Keuangan</div>
+      </div>
+      <div class="pimp-card">
+        <div class="pimp-av"><i class="fas fa-user-tie"></i></div>
+        <div class="pimp-name">Dr. Yudhanto Sapta W., M.Si</div>
+        <div class="pimp-title">Wakil Dekan III Bid. Kemahasiswaan</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ AKREDITASI ══════ -->
+<section id="akreditasi">
+  <div class="inner">
+    <div class="sec-hd">
+      <h3><i class="fas fa-award" style="margin-right:8px;color:var(--gold)"></i>Akreditasi Program Studi</h3>
+    </div>
+    <div class="akred-grid">
+      <div class="akred-item"><div class="akred-ring"><div class="g">B</div><div class="lb">BAN-PT</div></div><div class="akred-pn">Ilmu Administrasi Negara</div><div class="akred-ps">S1 Terakreditasi</div></div>
+      <div class="akred-item"><div class="akred-ring"><div class="g">B</div><div class="lb">BAN-PT</div></div><div class="akred-pn">Ilmu Pemerintahan</div><div class="akred-ps">S1 Terakreditasi</div></div>
+      <div class="akred-item"><div class="akred-ring"><div class="g">B</div><div class="lb">BAN-PT</div></div><div class="akred-pn">Sosiologi</div><div class="akred-ps">S1 Terakreditasi</div></div>
+      <div class="akred-item"><div class="akred-ring"><div class="g">B</div><div class="lb">BAN-PT</div></div><div class="akred-pn">Hub. Internasional</div><div class="akred-ps">S1 Terakreditasi</div></div>
+      <div class="akred-item"><div class="akred-ring"><div class="g">B</div><div class="lb">BAN-PT</div></div><div class="akred-pn">Ilmu Komunikasi</div><div class="akred-ps">S1 Terakreditasi</div></div>
+      <div class="akred-item"><div class="akred-ring"><div class="g">C</div><div class="lb">BAN-PT</div></div><div class="akred-pn">Ilmu Hukum</div><div class="akred-ps">S1 Terakreditasi</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ MITRA ══════ -->
+<section id="mitra">
+  <div class="inner">
+    <div class="sec-hd">
+      <h3><i class="fas fa-handshake" style="margin-right:8px;color:var(--gold)"></i>Mitra &amp; Kerjasama</h3>
+    </div>
+    <div class="mitra-row">
+      <div class="mitra-item"><div class="mn">PEMPROV<br>KEPRI</div></div>
+      <div class="mitra-item"><div class="mn">KPU<br>KEPRI</div></div>
+      <div class="mitra-item"><div class="mn">BAWASLU<br>KEPRI</div></div>
+      <div class="mitra-item"><div class="mn">PEMKOT<br>TG. PINANG</div></div>
+      <div class="mitra-item"><div class="mn">KEMENDAGRI<br>RI</div></div>
+      <div class="mitra-item"><div class="mn">BPS<br>KEPRI</div></div>
+      <div class="mitra-item"><div class="mn">BAPPEDA<br>KEPRI</div></div>
+      <div class="mitra-item"><div class="mn">UMT<br>MALAYSIA</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ FOOTER ══════ -->
+<footer id="footer">
+  <div id="ft-top">
+    <div class="inner">
+      <div class="ft-g">
+
+        <!-- Col 1 -->
+        <div>
+          <div class="ft-logo-row">
+            <img
+              src="https://fisip.umrah.ac.id/wp-content/uploads/2025/09/HEADER-FISIP-UMRAH-WEBSITE1.png"
+              alt="Logo FISIP UMRAH"
+              onerror="this.style.display='none'"
+            />
+            <div class="ft-brand">FISIP UMRAH<small>Fakultas Ilmu Sosial dan Ilmu Politik</small></div>
+          </div>
+          <p class="ft-about">Fakultas Ilmu Sosial dan Ilmu Politik Universitas Maritim Raja Ali Haji (FISIP UMRAH) adalah Pusat Kecemerlangan Pendidikan Tinggi, Riset, Mari-Sociopreneurship dan Tamadun Maritim berbasis kemaritiman, perbatasan, dan tamadun Melayu di kawasan Asia Tenggara.</p>
+          <div class="ft-socials">
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/fisipumrah.official/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2 -->
+        <div>
+          <h4>Informasi</h4>
+          <ul class="ft-ul">
+            <li><a href="#">Profil Fakultas</a></li>
+            <li><a href="#">Visi &amp; Misi</a></li>
+            <li><a href="#">Struktur Organisasi</a></li>
+            <li><a href="#">Program Studi</a></li>
+            <li><a href="#">Dosen &amp; Staf</a></li>
+            <li><a href="#">Akreditasi</a></li>
+            <li><a href="#">Renstra FISIP</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div>
+          <h4>Akademik &amp; Layanan</h4>
+          <ul class="ft-ul">
+            <li><a href="#">Kalender Akademik</a></li>
+            <li><a href="#">Kurikulum</a></li>
+            <li><a href="#">SIAKAD</a></li>
+            <li><a href="#">E-Learning</a></li>
+            <li><a href="#">Repository</a></li>
+            <li><a href="#">Jurnal FISIP</a></li>
+            <li><a href="#">Formulir Administrasi</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div>
+          <h4>Kontak Kami</h4>
+          <div class="ft-contact">
+            <div><i class="fas fa-map-marker-alt"></i>Jl. Raya Dompak, Komplek Gedung FISIP UMRAH, Tanjungpinang 29100</div>
+            <div><i class="fas fa-phone"></i>(0771) 8038666</div>
+            <div><i class="fas fa-fax"></i>(0771) 4500093</div>
+            <div><i class="fas fa-envelope"></i>fisip@umrah.ac.id</div>
+            <div><i class="fas fa-globe"></i>fisip.umrah.ac.id</div>
+          </div>
+          <div style="margin-top:13px;font-size:12.5px;color:rgba(255,255,255,.6)">
+            <i class="fas fa-clock" style="color:var(--gold2);margin-right:5px"></i>Sen – Jum: 08.00 – 16.00 WIB
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div id="ft-bottom">
+    <div class="inner">
+      <span>© 2025 Fakultas Ilmu Sosial dan Ilmu Politik UMRAH · All Rights Reserved.</span>
+      <span>Developed by <a href="#">Tim IT FISIP UMRAH</a> &nbsp;|&nbsp; <a href="#">Kebijakan Privasi</a> &nbsp;|&nbsp; <a href="#">Sitemap</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════ SCRIPT ══════ -->
+<script>
+// Slider
+let cur = 0;
+const sls  = document.querySelectorAll('#sl .slide');
+const dots = document.querySelectorAll('.s-dots span');
+function slGo(n){
+  sls[cur].classList.remove('on');
+  dots[cur].classList.remove('on');
+  cur = (n + sls.length) % sls.length;
+  sls[cur].classList.add('on');
+  dots[cur].classList.add('on');
+}
+function slNext(){ slGo(cur + 1); }
+function slPrev(){ slGo(cur - 1); }
+const slTimer = setInterval(slNext, 5500);
+// pause on hover
+document.getElementById('sl').addEventListener('mouseenter', () => clearInterval(slTimer));
+</script>
+</body>
+</html>
